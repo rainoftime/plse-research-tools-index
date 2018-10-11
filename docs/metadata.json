@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Csmith",
+        "pubs": [ "http://www.cs.utah.edu/~regehr/papers/pldi11-preprint.pdf" ],
+        "repo": "https://github.com/csmith-project/csmith",
+        "evaluation-artifact": null,
+        "maintainers": [ "John Regehr" ],
+        "tag": ["fuzzing", "bug detection", "compiler"],
+        "Website": "https://embed.cs.utah.edu/csmith/"
+    }
+]

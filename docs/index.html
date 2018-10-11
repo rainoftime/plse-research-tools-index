@@ -1,1 +1,30 @@
-Hello, world!
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PLSE Research Tools Index</title>
+  <link rel="stylesheet" href="assets/css/tabulator.min.css">
+  <script type="text/javascript" src="assets/js/tabulator.min.js"></script>
+</head>
+<body>
+  <div id="example-table"></div>
+</body>
+  <script type="text/javascript">
+    var table = new Tabulator("#example-table", {
+			layout:"fitColumns",
+			columns:[
+				{ title: "Name", field: "name" },
+				{ title: "Publications", field: "pubs" },
+				{ title: "Repository", field: "repo"},
+				{ title: "Evaluation Artifacts", field: "evaluation-artifact" },
+				{ title: "Maintainers", field: "maintainers" },
+				{ title: "Tags", field: "tags" },
+				{ title: "Website", field: "website" }
+			],
+		});
+
+		var tableData = [];
+		table.setData(tableData);
+  </script>
+</html>
