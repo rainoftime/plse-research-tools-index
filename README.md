@@ -1,8 +1,8 @@
-PLSE Research tools index
+PLSE Research Tools Index
 =========================
 
-An index database about PLSE (Programming Languages & Software Engineering)
-Reserach.
+An index database about artifacts in PLSE (Programming Languages & Software Engineering)
+Research.
 
 Goal of this project: track the progress and quality of artifacts in this
 area of research better.
