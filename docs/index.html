@@ -4,27 +4,66 @@
 <head>
   <meta charset="utf-8">
   <title>PLSE Research Tools Index</title>
-  <link rel="stylesheet" href="assets/css/tabulator.min.css">
-  <script type="text/javascript" src="assets/js/tabulator.min.js"></script>
 </head>
 <body>
-  <div id="example-table"></div>
+  <table id="data-table">
+		<tr>
+			<th style="background-color: gray">Name</th>
+			<th style="background-color: gray">Publications</th>
+			<th style="background-color: gray">Repository</th>
+			<th style="background-color: gray">Evaluation Artifact</th>
+			<th style="background-color: gray">Maintainers</th>
+			<th style="background-color: gray">Tags</th>
+			<th style="background-color: gray">Website</th>
+		</tr>
+	</table>
 </body>
-  <script type="text/javascript">
-    var table = new Tabulator("#example-table", {
-			layout:"fitColumns",
-			columns:[
-				{ title: "Name", field: "name" },
-				{ title: "Publications", field: "pubs" },
-				{ title: "Repository", field: "repo"},
-				{ title: "Evaluation Artifacts", field: "evaluation-artifact" },
-				{ title: "Maintainers", field: "maintainers" },
-				{ title: "Tags", field: "tags" },
-				{ title: "Website", field: "website" }
-			],
-		});
+	<script type="text/javascript">
+		function textDataCell(text) {
+			var cell = document.createElement("td");
+			var cellText = document.createTextNode(text);
+			cell.appendChild(cellText);
+			return cell;
+		}
+		function linkDataCell(link, text) {
+			if (link == null) {
+				return textDataCell("N/A");
+			}
+			var cell = document.createElement("td");
+			var anchor = document.createElement("a");
+			anchor.href = link;
+			anchor.text = text;
+			cell.appendChild(anchor);
+			return cell;
+		}
+		function reqListener () {
+			var result = JSON.parse(this.responseText);
+			var table = document.getElementById("data-table");
+			result.forEach(e => {
+				var row = document.createElement("tr");
+				row.appendChild(textDataCell(e["name"]));
+				var cell = document.createElement("td");
+				for (var i in e["pubs"]) {
+					var anchor = document.createElement("a");
+					anchor.href = e["pubs"];
+					var idx = parseInt(i) + 1;
+					anchor.text = idx.toString();
+					cell.appendChild(anchor);
+				}
+				row.appendChild(cell);
+				console.log(e);
+				row.appendChild(linkDataCell(e["repo"], e["repo"]));
+				row.appendChild(linkDataCell(e["evaluation-artifact"], e["evaluation-artifact"]));
+				row.appendChild(textDataCell(e["maintainers"].join(", ")));
+				row.appendChild(textDataCell(e["tags"].join(", ")));
+				row.appendChild(linkDataCell(e["website"], e["website"]));
+				table.appendChild(row);
+			});
+		}
 
-		var tableData = [];
-		table.setData(tableData);
+		var oReq = new XMLHttpRequest();
+		oReq.addEventListener("load", reqListener);
+		oReq.open("GET", "https://izgzhen.github.io/plse-research-tools-index/metadata.json");
+		oReq.send();
   </script>
 </html>

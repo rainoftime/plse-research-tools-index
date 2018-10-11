@@ -5,7 +5,7 @@
         "repo": "https://github.com/csmith-project/csmith",
         "evaluation-artifact": null,
         "maintainers": [ "John Regehr" ],
-        "tag": ["fuzzing", "bug detection", "compiler"],
-        "Website": "https://embed.cs.utah.edu/csmith/"
+        "tags": ["fuzzing", "bug detection", "compiler"],
+        "website": "https://embed.cs.utah.edu/csmith/"
     }
 ]
