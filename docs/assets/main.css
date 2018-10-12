@@ -5,3 +5,8 @@ table, th, td {
 th {
     background: lightgray;
 }
+
+.pub-link {
+    padding-left: 1px;
+    padding-right: 1px;
+}

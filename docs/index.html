@@ -50,9 +50,10 @@
 				var cell = document.createElement("td");
 				for (var i in e["pubs"]) {
 					var anchor = document.createElement("a");
-					anchor.href = e["pubs"];
-					var idx = parseInt(i) + 1;
-					anchor.text = idx.toString();
+					anchor.href = e["pubs"][i];
+					var name = anchor.href.substr(anchor.href.lastIndexOf('/') + 1);
+					anchor.className = "pub-link"
+					anchor.text = name;
 					cell.appendChild(anchor);
 				}
 				row.appendChild(cell);
