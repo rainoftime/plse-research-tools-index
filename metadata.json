@@ -18,5 +18,16 @@
         "tags": ["static analysis", "bug detection", "java"],
         "website": "https://errorprone.info",
         "release-date": "Jan 28, 2015"
+    },
+    {
+        "name": "Cozy",
+        "pubs": ["https://cozy.uwplse.org/cozy.pdf",
+                 "https://cozy.uwplse.org/cozy2.pdf"],
+        "repo": "https://github.com/CozySynthesizer/cozy",
+        "evaluation-artifact": "https://cozy.uwplse.org/pldi16/cozy-artifact-instructions.txt",
+        "maintainers": [ "Calvin Loncaric" ],
+        "tags": ["program synthesis", "optimization"],
+        "website": "https://cozy.uwplse.org",
+        "release-date": "N/A"
     }
 ]
