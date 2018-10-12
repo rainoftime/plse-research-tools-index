@@ -11,7 +11,7 @@ for entry in metadata:
     if not entry["repo"].startswith(GITHUB_PREFIX):
         continue
     owner_repo = entry["repo"][len(GITHUB_PREFIX):]
-    response = json.loads(requests.get("https://api.github.com/repos/csmith-project/csmith").text)
+    response = json.loads(requests.get("https://api.github.com/repos/" + owner_repo).text)
     entry["language"] = response["language"]
     entry["stargazers_count"] = response["stargazers_count"]
     entry["updated_at"] = response["updated_at"]
