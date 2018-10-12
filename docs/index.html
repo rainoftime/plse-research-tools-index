@@ -4,21 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>PLSE Research Tools Index</title>
+  <link rel="stylesheet" type="text/css" href="assets/main.css">
 </head>
 <body>
   <table id="data-table">
 		<tr>
-			<th style="background-color: gray">Name</th>
-			<th style="background-color: gray">Publications</th>
-			<th style="background-color: gray">Repository</th>
-			<th style="background-color: gray">Evaluation Artifact</th>
-			<th style="background-color: gray">Maintainers</th>
-			<th style="background-color: gray">Tags</th>
-			<th style="background-color: gray">Website</th>
-			<th style="background-color: gray">Release date</th>
-			<th style="background-color: gray">Update date</th>
-			<th style="background-color: gray">Github Stars</th>
-			<th style="background-color: gray">Language</th>
+			<th>Name</th>
+			<th>Publications</th>
+			<th>Repository</th>
+			<th>Evaluation Artifact</th>
+			<th>Maintainers</th>
+			<th>Tags</th>
+			<th>Website</th>
+			<th>Release date</th>
+			<th>Update date</th>
+			<th>Github Stars</th>
+			<th>Language</th>
 		</tr>
 	</table>
 </body>
@@ -55,7 +56,6 @@
 					cell.appendChild(anchor);
 				}
 				row.appendChild(cell);
-				console.log(e);
 				row.appendChild(linkDataCell(e["repo"], e["repo"]));
 				row.appendChild(linkDataCell(e["evaluation-artifact"], e["evaluation-artifact"]));
 				row.appendChild(textDataCell(e["maintainers"].join(", ")));
