@@ -6,6 +6,7 @@
         "evaluation-artifact": null,
         "maintainers": [ "John Regehr" ],
         "tags": ["fuzzing", "bug detection", "compiler"],
-        "website": "https://embed.cs.utah.edu/csmith/"
+        "website": "https://embed.cs.utah.edu/csmith/",
+        "release-date": "April 12, 2011"
     }
 ]

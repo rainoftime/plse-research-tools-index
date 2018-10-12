@@ -11,18 +11,22 @@ area of research better.
 
 The principle of this repo is to derive data automatically as much as possible.
 
-Metadata is tracker manually, inside `metadata.json`.
+Metadata is tracked manually, inside `metadata.json`.
 
 Derived data include:
 
-- [ ] Releases
-- [ ] Language
-- [ ] Github Stars
-- [ ] Contributors
+- Language
+- Github stars
+- Latest update time
+
+Currently, derived data will be updated manually and irregularly. Before I can set up a database the cache relevant data,
+please make a PR to update them.
 
 # Contribution
 
 Welcome to contribute through standard Github PR: add/delete an entry to `metadata.json` or update any entry.
+
+Run `python3 generate.py` to update `docs/data.json` with `metadata.json`.
 
 # Disclaimer
 

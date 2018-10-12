@@ -15,6 +15,10 @@
 			<th style="background-color: gray">Maintainers</th>
 			<th style="background-color: gray">Tags</th>
 			<th style="background-color: gray">Website</th>
+			<th style="background-color: gray">Release date</th>
+			<th style="background-color: gray">Update date</th>
+			<th style="background-color: gray">Github Stars</th>
+			<th style="background-color: gray">Language</th>
 		</tr>
 	</table>
 </body>
@@ -57,13 +61,18 @@
 				row.appendChild(textDataCell(e["maintainers"].join(", ")));
 				row.appendChild(textDataCell(e["tags"].join(", ")));
 				row.appendChild(linkDataCell(e["website"], e["website"]));
+				row.appendChild(textDataCell(e["release-date"]));
+				var update_date = new Date(e["updated_at"]);
+				row.appendChild(textDataCell(update_date.toLocaleDateString()));
+				row.appendChild(textDataCell(e["stargazers_count"]));
+				row.appendChild(textDataCell(e["language"]));
 				table.appendChild(row);
 			});
 		}
 
 		var oReq = new XMLHttpRequest();
 		oReq.addEventListener("load", reqListener);
-		oReq.open("GET", "https://izgzhen.github.io/plse-research-tools-index/metadata.json");
+		oReq.open("GET", "https://izgzhen.github.io/plse-research-tools-index/data.json");
 		oReq.send();
   </script>
 </html>
