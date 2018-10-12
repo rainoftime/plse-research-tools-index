@@ -29,5 +29,16 @@
         "tags": ["program synthesis", "optimization"],
         "website": "https://cozy.uwplse.org",
         "release-date": "N/A"
+    },
+    {
+        "name": "FlowDroid",
+        "pubs": [,
+                 "https://cozy.uwplse.org/cozy2.pdf"],
+        "repo": "https://github.com/secure-software-engineering/FlowDroid",
+        "evaluation-artifact": "N/A",
+        "maintainers": [ "Steven Arzt" ],
+        "tags": ["static analysis", "android", "java", "data flow"],
+        "website": "https://blogs.uni-paderborn.de/sse/tools/flowdroid",
+        "release-date": "Jan 16, 2018"
     }
 ]
