@@ -17,7 +17,7 @@
 			<th>Tags</th>
 			<th>Website</th>
 			<th>Release date</th>
-			<th>Update date</th>
+			<th>Last commit</th>
 			<th>Github Stars</th>
 			<th>Language</th>
 		</tr>
@@ -63,7 +63,7 @@
 				row.appendChild(textDataCell(e["tags"].join(", ")));
 				row.appendChild(linkDataCell(e["website"], e["website"]));
 				row.appendChild(textDataCell(e["release-date"]));
-				var update_date = new Date(e["updated_at"]);
+				var update_date = new Date(e["last-commit"]);
 				row.appendChild(textDataCell(update_date.toLocaleDateString()));
 				row.appendChild(textDataCell(e["stargazers_count"]));
 				row.appendChild(textDataCell(e["language"]));

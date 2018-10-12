@@ -14,6 +14,6 @@ for entry in metadata:
     response = json.loads(requests.get("https://api.github.com/repos/" + owner_repo).text)
     entry["language"] = response["language"]
     entry["stargazers_count"] = response["stargazers_count"]
-    entry["updated_at"] = response["updated_at"]
+    entry["last-commit"] = response["pushed_at"]
 
 open("docs/data.json", "w").write(json.dumps(metadata))
