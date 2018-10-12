@@ -8,5 +8,15 @@
         "tags": ["fuzzing", "bug detection", "compiler"],
         "website": "https://embed.cs.utah.edu/csmith/",
         "release-date": "April 12, 2011"
+    },
+    {
+        "name": "Error Prone",
+        "pubs": [],
+        "repo": "https://github.com/google/error-prone",
+        "evaluation-artifact": null,
+        "maintainers": [ "Google" ],
+        "tags": ["static analysis", "bug detection", "java"],
+        "website": "https://errorprone.info",
+        "release-date": "Jan 28, 2015"
     }
 ]
