@@ -32,8 +32,7 @@
     },
     {
         "name": "FlowDroid",
-        "pubs": [,
-                 "https://cozy.uwplse.org/cozy2.pdf"],
+        "pubs": ["http://www.bodden.de/pubs/far+14flowdroid.pdf"],
         "repo": "https://github.com/secure-software-engineering/FlowDroid",
         "evaluation-artifact": "N/A",
         "maintainers": [ "Steven Arzt" ],
