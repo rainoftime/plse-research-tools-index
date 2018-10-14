@@ -19,8 +19,8 @@ Derived data include:
 - Github stars
 - Latest commit time
 
-Currently, derived data will be updated manually through program and irregularly.
-Before I can set up a database service the caches srelevant data, please make a PR to update them.
+Currently, derived data will be updated by running scripts manually and irregularly.
+Before I can set up a database service that caches relevant data, please make a PR to update them.
 
 # Contribution
 
