@@ -41,24 +41,34 @@
 			cell.appendChild(anchor);
 			return cell;
 		}
+		function linksCell(links) {
+			if (links.length == 0) {
+				return textDataCell("N/A");
+			}
+			var cell = document.createElement("td");
+			for (var link of links) {
+				var anchor = document.createElement("a");
+				anchor.href = link;
+				var name = anchor.href.substr(anchor.href.lastIndexOf('/') + 1);
+				anchor.className = "pub-link"
+				anchor.text = name;
+				cell.appendChild(anchor);
+			}
+			return cell;
+		}
 		function reqListener () {
 			var result = JSON.parse(this.responseText);
 			var table = document.getElementById("data-table");
 			result.forEach(e => {
 				var row = document.createElement("tr");
 				row.appendChild(textDataCell(e["name"]));
-				var cell = document.createElement("td");
-				for (var i in e["pubs"]) {
-					var anchor = document.createElement("a");
-					anchor.href = e["pubs"][i];
-					var name = anchor.href.substr(anchor.href.lastIndexOf('/') + 1);
-					anchor.className = "pub-link"
-					anchor.text = name;
-					cell.appendChild(anchor);
-				}
-				row.appendChild(cell);
+				row.appendChild(linksCell(e["pubs"]));
 				row.appendChild(linkDataCell(e["repo"], e["repo"]));
-				row.appendChild(linkDataCell(e["evaluation-artifact"], e["evaluation-artifact"]));
+				if (Array.isArray(e["evaluation-artifact"])) {
+					row.appendChild(linksCell(e["evaluation-artifact"]));
+				} else {
+					row.appendChild(linkDataCell(e["evaluation-artifact"], e["evaluation-artifact"]));
+				}
 				row.appendChild(textDataCell(e["maintainers"].join(", ")));
 				row.appendChild(textDataCell(e["tags"].join(", ")));
 				row.appendChild(linkDataCell(e["website"], e["website"]));
