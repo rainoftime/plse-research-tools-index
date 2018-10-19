@@ -50,5 +50,15 @@
         "tags": ["incremental computation", "ocaml", "rust", "python"],
         "website": "http://adapton.org",
         "release-date": "2014"
+    },
+    {
+        "name": "LLVM",
+        "pubs": "http://llvm.org/pubs",
+        "repo": "https://github.com/llvm-mirror/llvm",
+        "evaluation-artifact": [],
+        "maintainers": [ "LLVM Team" ],
+        "tags": ["compiler", "static analysis", "IR"],
+        "website": "https://llvm.org",
+        "release-date": "Nov 18, 2003"
     }
 ]
