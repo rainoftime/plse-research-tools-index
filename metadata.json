@@ -53,7 +53,7 @@
     },
     {
         "name": "LLVM",
-        "pubs": "http://llvm.org/pubs",
+        "pubs": [ "http://llvm.org/pubs" ],
         "repo": "https://github.com/llvm-mirror/llvm",
         "evaluation-artifact": [],
         "maintainers": [ "LLVM Team" ],
