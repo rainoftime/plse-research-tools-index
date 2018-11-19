@@ -10,7 +10,7 @@
         "release-date": "April 12, 2011"
     },
     {
-        "name": "Error Prone",
+        "name": "ErrorProne",
         "pubs": [],
         "repo": "https://github.com/google/error-prone",
         "evaluation-artifact": "N/A",
@@ -60,5 +60,15 @@
         "tags": ["compiler", "static analysis", "IR"],
         "website": "https://llvm.org",
         "release-date": "Nov 18, 2003"
+    },
+    {
+        "name": "Z3",
+        "pubs": [ "https://link.springer.com/chapter/10.1007/978-3-540-78800-3_24" ],
+        "repo": "https://github.com/Z3Prover/z3",
+        "evaluation-artifact": [],
+        "maintainers": [ "Microsoft Research" ],
+        "tags": ["solver", "SMT", "logic" ],
+        "website": "https://rise4fun.com/z3",
+        "release-data": "Oct 10, 2012"
     }
 ]
