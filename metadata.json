@@ -69,6 +69,6 @@
         "maintainers": [ "Microsoft Research" ],
         "tags": ["solver", "SMT", "logic" ],
         "website": "https://rise4fun.com/z3",
-        "release-data": "Oct 10, 2012"
+        "release-date": "Oct 10, 2012"
     }
 ]
