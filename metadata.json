@@ -70,5 +70,15 @@
         "tags": ["solver", "SMT", "logic" ],
         "website": "https://rise4fun.com/z3",
         "release-date": "Oct 10, 2012"
+    },
+    {
+        "name": "Soot",
+        "pubs": [ "https://sable.github.io/soot/resources/lblh11soot.pdf" ],
+        "repo": "https://github.com/Sable/soot",
+        "evaluation-artifact": "",
+        "maintainers": "Sable@McGill",
+        "tags": ["java", "program analysis", "optimization", "android"],
+        "website": "https://sable.github.io/soot/",
+        "release-date": "Dec 31, 1996"
     }
 ]
